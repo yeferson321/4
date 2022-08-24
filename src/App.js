@@ -1,13 +1,36 @@
+import React from 'react';
+import { Navigate, Route, Routes } from "react-router-dom";
 import './App.css';
+import DataProvider from './context/DataContext'
+import Opening from './components/Opening/Opening';
+import Check from './components/Check/Check';
+import SigninGoogle from './components/SigninGoogle/SigninGoogle';
+import Signup from './components/Signup/Signup';
+import Signin from './components/Signin/Signin';
+import Welcome from './components/Welcome/Welcome';
+import Expired from './components/Expired/Expired';
+import ForgetPassword from './components/ForgetPassword/Forget';
+import Newpassword from './components/NewPassword/Newpassword';
 
 function App() {
+
+  const token = localStorage.getItem('token');
+
   return (
-    <div className="App">
-      <header className="App-header">
-          Learn React
-  
-      </header>
-    </div>
+    <DataProvider>
+      <Routes>
+        <Route path="/" element={<Opening />} />
+        <Route path="/check" element={<Check />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signin/email=:email" element={<SigninGoogle />} />
+        <Route path="/forget-password" element={<ForgetPassword/>} /> 
+        <Route path="/new-password/:token" element={<Newpassword/>} /> 
+        <Route path="/welcome" element={ token ? (<Welcome />):( <Navigate to="/expired"/>)} />
+        <Route path="/expired" element={<Expired />} />
+        <Route path="*" element={<Opening />} />
+      </Routes>
+    </DataProvider>
   );
 }
 
