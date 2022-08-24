@@ -26,12 +26,11 @@ function GoogleSignin() {
                         const message = (res.data?.message ?? 'Intente de nuevo')
                         const answer = (res.data?.response)
                         const token = (res.data?.token)
-                        console.log(res)
 
                         if (answer === true) {
 
-                            localStorage.setItem('token', res.data?.token)
-                            //navigate('/welcome');
+                            localStorage.setItem('token', token)
+                            navigate('/welcome');
 
                         } else {
 
