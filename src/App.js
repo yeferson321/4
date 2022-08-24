@@ -14,6 +14,7 @@ import Newpassword from './components/NewPassword/Newpassword';
 
 function App() {
 
+  
   const token = localStorage.getItem('token');
 
   return (
