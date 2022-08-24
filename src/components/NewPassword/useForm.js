@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { postNewPassword } from '../services/Client';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 export const useForm = (Form) => {
 
@@ -87,7 +88,7 @@ export const useForm = (Form) => {
         } else {
             setDisabledButton(true);
         }
-    },[errors.email, errors.password1, errors.password2]);
+    }, [errors.email, errors.password1, errors.password2]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -100,8 +101,26 @@ export const useForm = (Form) => {
 
             if (answer === true) {
 
-                setResponse(message)                 
-                setTimeout(function () { navigate('/signin') }, 2000);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'center',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: "Contraseña cambiada",
+                    text: "Sera redireccionado a Inicio sesion",
+                }).then(() => {
+                    navigate('/signin');
+                })
 
             } else if (answer === false) {
 
