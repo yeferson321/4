@@ -34,11 +34,11 @@ function GoogleSignin() {
 
                         } else {
 
-                            setResponse(message);
-
                             if (redirect) {
                                 const href = redirect.split("@").join("&");
                                 navigate(href);
+                            } else {
+                                setResponse(message);
                             }
                             
                         }
