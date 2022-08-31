@@ -12,7 +12,7 @@ export const useForm = (Form) => {
 
     useEffect(() => {
         addCode(code)
-    },[code]);
+    },[code, addCode]);
 
     const handleChange = (e) => {
         setForm({

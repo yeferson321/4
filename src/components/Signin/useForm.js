@@ -6,7 +6,7 @@ import { AuthService } from '../services/Auth';
 
 export const useForm = (Form) => {
 
-    const { login, logout } = AuthService();
+    const { login } = AuthService();
     const [form, setForm] = useState(Form);
     const [errors, setErrors] = useState({});
     const [response, setResponse] = useState(null);
@@ -32,7 +32,7 @@ export const useForm = (Form) => {
         if (e.target.name === "email") {
             if (form.email === "") {
                 errors.email = "El campo es obligatorio"
-            } else if (form.email.search(/^[a-zA-Z0-9_.+-\ñ]+@[a-zA-Z]+\.[a-zA-Z.]+$/)) {
+            } else if (form.email.search(/^[a-zA-Z0-9_.+-]+@[a-zA-Z]+\.[a-zA-Z.]+$/)) {
                 errors.email = "Ingrese una dirección de correo electrónico válida, como: sunombre@email.com"
             } else {
                 errors.email = ""

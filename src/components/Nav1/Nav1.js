@@ -19,19 +19,19 @@ function Nav1() {
                             <li className="nav-item">
                                 <a className={`${styles.navLink} ${"nav-link"}`} href="/">Home</a>
                             </li>
-                            <hr></hr>
+                            <hr className={styles.line}></hr>
                             <li className="nav-item">
                                 <a className={`${styles.navLink} ${"nav-link"}`} href="/">Features</a>
                             </li>
-                            <hr></hr>
+                            <hr className={styles.line}></hr>
                             <li className="nav-item">
                                 <a className={`${styles.navLink} ${"nav-link"}`} href="/">Pricing</a>
                             </li>
-                            <hr></hr>
+                            <hr className={styles.line}></hr>
                             <li className="nav-item">
-                                <a className={`${styles.navLink} ${"navLink nav-link"}`} href="/">Explore</a>
+                                <a className={`${styles.navLink} ${styles.navLinkone} ${"navLink nav-link"}`} href="/">Explore</a>
                             </li>
-                            <hr></hr>
+                            <hr className={`${styles.line}`} ></hr>
                         </ul>
                         <span className={`${styles.navbarButton} ${"navbar-text"}`}>
                             <div>

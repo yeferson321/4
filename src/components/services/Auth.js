@@ -1,5 +1,4 @@
-import { isExpired, decodeToken } from "react-jwt";
-import { useState } from "react"
+//import { isExpired, decodeToken } from "react-jwt";
 
 export const AuthService = () => {
 
@@ -12,8 +11,8 @@ export const AuthService = () => {
     };
 
     const verifyToken = () => {
-        const token = localStorage.getItem('token');
-        const validityToken = (isExpired(token));
+        //const token = localStorage.getItem('token');
+        //const validityToken = (isExpired(token));
     };
 
     return { login, logout, verifyToken }

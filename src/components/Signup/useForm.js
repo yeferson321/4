@@ -60,7 +60,7 @@ export const useForm = (Form) => {
         if (e.target.name === "email") {
             if (form.email === "") {
                 errors.email = "El campo es obligatorio"
-            } else if (form.email.search(/^[a-zA-Z0-9_.+-\ñ]+@[a-zA-Z]+\.[a-zA-Z.]+$/)) {
+            } else if (form.email.search(/^[a-zA-Z0-9_.+-]+@[a-zA-Z]+\.[a-zA-Z.]+$/)) {
                 errors.email = "Ingrese una dirección de correo electrónico válida, como: sunombre@email.com"
             } else {
                 errors.email = ""

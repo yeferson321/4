@@ -4,14 +4,14 @@ import { useParams } from 'react-router';
 import styles from './Newpassword.module.css';
 import Footer1 from '../Footer1/Footer1';
 import Nav2 from '../Nav2/Nav2';
-import { isExpired, decodeToken } from "react-jwt";
+import { isExpired } from "react-jwt";
 
 function Newpassword() {
 
     let params = useParams();
     const [token] = useState(params.token);
     const Form = { email: '', password1: '', password2: '', token: token }
-    const { form, errors, response, disabledButton, typePassword, handleChange, handleBlur, handleSubmit, showPassword } = useForm(Form);
+    const { errors, response, disabledButton, typePassword, handleChange, handleBlur, handleSubmit, showPassword } = useForm(Form);
     const [validityToken] = useState(isExpired(params.token));
 
     return (
