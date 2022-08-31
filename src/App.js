@@ -1,6 +1,6 @@
-import React from 'react';
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import DataProvider from './context/DataContext'
 import Opening from './components/Opening/Opening';
 import Check from './components/Check/Check';
@@ -14,8 +14,6 @@ import Newpassword from './components/NewPassword/Newpassword';
 
 function App() {
 
-  const token = localStorage.getItem('token');
-
   return (
     <DataProvider>
       <Routes>
@@ -26,7 +24,7 @@ function App() {
         <Route path="/signin/email=:email" element={<SigninGoogle />} />
         <Route path="/forget-password" element={<ForgetPassword/>} /> 
         <Route path="/new-password/:token" element={<Newpassword/>} /> 
-        <Route path="/welcome" element={ token ? (<Welcome />):( <Navigate to="/expired"/>)} />
+        <Route path="/welcome" element={<Welcome /> } />
         <Route path="/expired" element={<Expired />} />
         <Route path="*" element={<Opening />} />
       </Routes>

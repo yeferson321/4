@@ -8,7 +8,7 @@
     background-color: rgba(240, 255, 255, 0)!important;
 }
 
-@media only screen and (min-width:700px) and (max-width:991px) {
+@media only screen and (min-width:700px) and (max-width:992px) {
     .navbar{
         margin-left: 60px!important;
         margin-right: 60px!important;
@@ -34,7 +34,7 @@
     margin-right: auto;
     margin: 0 auto;
     padding: 5px;
-    gap: 0px;
+    gap: 10px;
     text-align: center;
 }
 
@@ -108,20 +108,4 @@
     .collapse{
         text-align: center;
     }
-}
-
-@media only screen and (max-width:1100px) {
-    .navLinkone{
-        display: none!important;
-    }
-}
-
-@media only screen and (max-width:991px) {
-    .navLinkone{
-        display: block!important;
-    }
-}
-
-.line{
-    margin: 12px 0px!important;
 }

@@ -2,9 +2,11 @@ import { useState } from "react"
 import { postSigninClient } from '../services/Client';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthService } from '../services/Auth';
 
 export const useForm = (Form) => {
 
+    const { login, logout } = AuthService();
     const [form, setForm] = useState(Form);
     const [errors, setErrors] = useState({});
     const [response, setResponse] = useState(null);
@@ -82,7 +84,7 @@ export const useForm = (Form) => {
 
             if (answer === true) {
 
-                localStorage.setItem('token', res.data?.token)
+                login(res.data?.token)
                 navigate('/welcome');
 
             } else {
