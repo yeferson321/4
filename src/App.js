@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 // Css bootstrap min //
+import "bootstrap-icons/font/bootstrap-icons.css";
+// Css bootstrap icons css //
 import "bootstrap/dist/css/bootstrap.min.css";
 // JavaScript bootstrap Bundle with Popper //
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
