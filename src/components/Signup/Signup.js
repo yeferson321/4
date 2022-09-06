@@ -74,6 +74,7 @@ function Signup() {
                 </div>
 
             </div>
+            
             <Footer1 />
         </div>
     );
