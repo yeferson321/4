@@ -35,7 +35,7 @@ export const useForm = (Form) => {
         }
 
         return errors;
-        
+
     }
 
     const showPassword = () => {
@@ -47,12 +47,13 @@ export const useForm = (Form) => {
     }
 
     useEffect(() => {
-        if (errors.password === ""){
+        document.getElementById('email').disabled = true;
+        if (errors.password === "") {
             setDisabledButton(false);
         } else {
             setDisabledButton(true);
         }
-    },[errors.password]);
+    }, [errors.password],);
 
     const handleSubmit = (e) => {
         e.preventDefault();

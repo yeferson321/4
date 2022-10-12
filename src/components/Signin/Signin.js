@@ -19,11 +19,11 @@ function Signin() {
                 <p className={styles.p}>¿Aun no tienes una cuenta? <a href="/signup">Unete.</a></p>
 
                 <form onSubmit={handleSubmit}>
-                    
+
                     <div className="mb-3">
                         <label htmlFor="InputEmail" className={`${styles.formLabel} ${"form-label"}`}>Correo electronico</label>
                         <input type="text" className={`${styles.formControl} ${"form-control"}`} aria-describedby="emailHelp"
-                            placeholder='No compartimos tu correo electrónico' id='email' name='email'  value={form.email} onKeyUp={handleBlur} onBlur={handleBlur} onChange={handleChange} required />
+                            placeholder='No compartimos tu correo electrónico' id='email' name='email' value={form.email} onKeyUp={handleBlur} onBlur={handleBlur} onChange={handleChange} required />
                         {errors.email && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{errors.email}</label>}
                     </div>
 
@@ -31,19 +31,16 @@ function Signin() {
                         <label htmlFor="InputPassword" className={`${styles.formLabel} ${"form-label"}`}>Password contraseña</label>
                         <input type={typePassword} className={`${styles.formControl} ${"form-control"}`} id='password' name='password' value={form.password} onKeyUp={handleBlur} onBlur={handleBlur} onChange={handleChange} required />
                         {errors.password && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{errors.password}</label>}
+                        {response && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{response}</label>}
                     </div>
 
                     <div className={`${styles.mb} ${"form-switch"}`}>
-                        <input className="form-check-input" type="checkbox" role="switch" onClick={showPassword}  />
+                        <input className="form-check-input" type="checkbox" role="switch" onClick={showPassword} />
                         <label className={`${styles.checkLabel} ${"form-check-label"}`} htmlFor="flexSwitchCheckDefault">Mostrar contraseñas</label>
                     </div>
 
                     <div className={`${styles.mb}`}>
                         <button htmlFor="submit" className={`${styles.btnPrimary} ${"btn btn-primary"}`} id="btn" disabled={disabledButton}>Continuar</button>
-                    </div>
-
-                    <div className={`${styles.mb}`}>
-                        {response && <div className="alert alert-warning text-center" role="alert">{response}</div>}
                     </div>
 
                     <div className={`${styles.mb}`}>

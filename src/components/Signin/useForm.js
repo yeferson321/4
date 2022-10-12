@@ -66,12 +66,12 @@ export const useForm = (Form) => {
     }
 
     useEffect(() => {
-        if (errors.email === "" && errors.password === ""){
+        if (errors.email === "" && errors.password === "") {
             setDisabledButton(false);
         } else {
             setDisabledButton(true);
         }
-    },[errors.email, errors.password]);
+    }, [errors.email, errors.password]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

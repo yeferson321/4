@@ -22,7 +22,7 @@ export const ClientService = () => {
 
 export async function postPayoutsClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/payments/payouts",
+    url: "http://localhost:5000/v1/payments/payouts",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ export async function postPayoutsClient(datos) {
 
 export async function postSignupGoogleClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/signup/google",
+    url: "http://localhost:5000/v1/signup/google",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ export async function postSignupGoogleClient(datos) {
 
 export async function postSignupClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/signup",
+    url: "http://localhost:5000/v1/signup",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export async function postSignupClient(datos) {
 
 export async function postSigninClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/signin",
+    url: "http://localhost:5000/v1/signin",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ export async function postSigninClient(datos) {
 
 export async function postForgetPassword(email) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/forgetPassword",
+    url: "http://localhost:5000/v1/forgetPassword",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ export async function postForgetPassword(email) {
 
 export async function postNewPassword(form) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/newpassword",
+    url: "http://localhost:5000/v1/newpassword",
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
