@@ -81,10 +81,13 @@ export const useForm = (Form) => {
             const message = (res.data?.message ?? 'Intente de nuevo')
             const type = (res.data?.type)
             const answer = (res.data?.response)
+            const userName = (res.data?.userName)
+
+            console.log(res.data)
 
             if (answer === true) {
 
-                login(res.data?.token)
+                login(res.data?.token, userName)
                 navigate('/welcome');
 
             } else {

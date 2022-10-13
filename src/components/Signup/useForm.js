@@ -6,7 +6,7 @@ export const useForm = (Form) => {
 
     const [form, setForm] = useState(Form);
     const [errors, setErrors] = useState({});
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState({ email: '', error: '' });
     const [disabledButton, setDisabledButton] = useState(true);
     const [typePassword, setTypePassword] = useState("password");
     const navigate = useNavigate();
@@ -104,7 +104,7 @@ export const useForm = (Form) => {
     }
 
     const validateCheckbox = (form, e) => {
-        if (e.target.name === "checkbox"){
+        if (e.target.name === "checkbox") {
             if (form.checkbox === true) {
                 errors.checkbox = "El campo es obligatorio"
             } else {
@@ -130,7 +130,7 @@ export const useForm = (Form) => {
         } else {
             setDisabledButton(true);
         }
-    },[errors.name, errors.email, errors.password1, errors.password2, errors.checkbox ]);
+    }, [errors.name, errors.email, errors.password1, errors.password2, errors.checkbox]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -148,9 +148,17 @@ export const useForm = (Form) => {
 
             } else {
 
-                setResponse(message)
+                response.error = ""
+                response.email = ""
+        
+                if (type) {
+                    response[type] = message 
+                }
                 document.getElementById(type).focus();
+                console.log(response)
+                return response;
                 
+
             }
         })
     };

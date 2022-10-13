@@ -31,6 +31,7 @@ function Signup() {
                         <input type="text" className={`${styles.formControl} ${"form-control"}`} aria-describedby="emailHelp"
                             placeholder='No compartimos tu correo electrónico' name='email' id='email' value={form.email} onKeyUp={handleBlur} onBlur={handleBlur} onChange={handleChange} />
                         {errors.email && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{errors.email}</label>}
+                        {response.email && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{response.email}</label>}
                     </div>
                     <div className="mb-3">
                         <label htmlFor="InputPassword" className={`${styles.formLabel} ${"form-label"}`}>Contraseña</label>
@@ -59,10 +60,8 @@ function Signup() {
 
                     <div className={`${styles.mb}`}>
                         <button htmlFor="submit" className={`${styles.btnPrimary} ${"btn btn-primary"}`} id="btn" disabled={disabledButton}>Continuar</button>
-                    </div>
 
-                    <div className={`${styles.mb}`}>
-                        {response && <div className="alert alert-warning text-center" role="alert">{response}</div>}
+                        {response.error && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} id="error">{response.error}</label>}
                     </div>
 
                 </form>

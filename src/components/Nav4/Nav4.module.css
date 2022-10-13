@@ -1,0 +1,51 @@
+.offcanvas {
+    max-width: 65% !important;
+}
+
+.offcanvasHeader {
+    padding: 11px 21px !important;
+}
+
+.offcanvasTitle {
+    font-family: 'Roboto' !important;
+    font-weight: 600 !important;
+    color: rgb(36, 36, 36) !important;
+}
+
+.imgFluid {
+    width: 70px;
+}
+
+.toggler {
+    padding: 0px !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    gap: 15px !important;
+    display: flex;
+}
+
+.bi {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.navbar {
+    background-color: #1f2937 !important;
+}
+
+.rounded {
+    width: 30px;
+    height: 30px;
+    border-radius: 150px;
+}
+
+.navLink {
+    font-family: 'Roboto' !important;
+    font-weight: 600 !important;
+    color: rgb(36 36 36 / 74%) !important;
+}
+
+.navLink:hover {
+    color: #6366f1 !important;
+}

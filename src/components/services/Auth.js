@@ -1,20 +1,30 @@
 //import { isExpired, decodeToken } from "react-jwt";
+import { useNavigate } from 'react-router-dom';
+import { useState  } from 'react';
 
 export const AuthService = () => {
 
-    const login = (token) => {
-        localStorage.setItem('token', token);
-    };
+    const navigate = useNavigate();
 
+    //método que nos permitirá chequear si existe un token, en tal
+    //caso retornará true
+    const checkToken = () => {
+        return !!localStorage.getItem('token');
+    }
+
+    //método que nos permite establecer el token en el almacenamiento local
+    const login = (token, userName) => {
+        localStorage.setItem('token', token);
+        localStorage.setItem('userName', userName);
+    }; 
+
+    //método que nos permite eliminar el token en el almacenamiento local
     const logout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('userName');
+   
     };
 
-    const verifyToken = () => {
-        //const token = localStorage.getItem('token');
-        //const validityToken = (isExpired(token));
-    };
-
-    return { login, logout, verifyToken }
+    return { login, logout, checkToken }
 
 }

@@ -37,14 +37,7 @@ p{
     width: 100%;
     font-family: 'Open Sans', sans-serif!important;
     padding: 0.7rem!important;
-    background-color: #6366f1!important;
-    border-color: #6366f1!important;
     box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(99 102 241 / 90%) !important;
-}
-
-
-.btnPrimary:hover{
-    background-color: #8082f0!important;
 }
 
 .line{
