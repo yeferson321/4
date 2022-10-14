@@ -1,9 +1,14 @@
+.navbar {
+    background-color: #1f2937 !important;
+    padding: 10px;
+}
+
 .offcanvas {
     max-width: 65% !important;
 }
 
 .offcanvasHeader {
-    padding: 11px 21px !important;
+    padding: 15px 30px !important;
 }
 
 .offcanvasTitle {
@@ -27,16 +32,12 @@
     display: flex;
     align-items: center;
     color: white;
-    font-size: 1.1rem;
-}
-
-.navbar {
-    background-color: #1f2937 !important;
+    font-size: 1.2rem;
 }
 
 .rounded {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     border-radius: 150px;
 }
 

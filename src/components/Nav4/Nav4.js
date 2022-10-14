@@ -11,7 +11,7 @@ function Nav4() {
         <div className='Nav4'>
             <nav className={`${styles.navbar} ${"navbar bg-light fixed-top"}`}>
                 <div className="container-fluid">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/apideployusers.appspot.com/o/static_files%2Flogo2.png?alt=media&token=65078781-c9ca-45fe-905d-eeb24cef8b84" className={`${styles.imgFluid} ${"imgFluid img-fluid"}`} alt="..." />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/apideployusers.appspot.com/o/static_files%2Flogo2.png?alt=media&token=65078781-c9ca-45fe-905d-eeb24cef8b84" className={`${styles.imgFluid} ${"img-fluid"}`} alt="..." />
                     <a className={`${styles.toggler}`} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <div className={`${styles.bi}`} ><i className="bi bi-bell"></i></div>
                         <div><img src="https://firebasestorage.googleapis.com/v0/b/apideployusers.appspot.com/o/static_files%2Ficon.jpg?alt=media&token=06deb95c-8a13-4765-98f2-fb2636f35995" className={`${styles.rounded}`} alt="..." /></div>
