@@ -46,7 +46,7 @@ export async function postSignupGoogleClient(datos) {
 
 export async function postSignupClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/signup",
+    url: "http://localhost:5000/v1/signup",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export async function postSignupClient(datos) {
 
 export async function postSigninClient(datos) {
   const response = await axios({
-    url: "https://apiuserdeploy.herokuapp.com/v1/signin",
+    url: "http://localhost:5000/v1/signin",
     method: "POST",
     headers: {
       'Content-Type': 'application/json'

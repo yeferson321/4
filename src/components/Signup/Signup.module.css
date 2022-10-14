@@ -63,6 +63,15 @@ p{
     margin: 10px 0px;
 }
 
+.validityError{
+    margin-top: 10px;
+    margin-bottom: 0px!important;
+}
+
 .mb{
     margin-bottom: 10%!important;
+}
+
+.alert{
+    margin-top: 2rem!important
 }

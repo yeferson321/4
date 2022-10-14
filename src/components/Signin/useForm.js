@@ -9,7 +9,7 @@ export const useForm = (Form) => {
     const { login } = AuthService();
     const [form, setForm] = useState(Form);
     const [errors, setErrors] = useState({});
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState({});
     const [disabledButton, setDisabledButton] = useState(true);
     const [typePassword, setTypePassword] = useState("password");
     const navigate = useNavigate();
@@ -90,8 +90,7 @@ export const useForm = (Form) => {
 
             } else {
 
-                setResponse(message)
-                document.getElementById(type).focus();
+                {type === "password" ? setResponse({password: message}) && document.getElementById(type).focus() : setResponse({error: message})}
 
             }
         })

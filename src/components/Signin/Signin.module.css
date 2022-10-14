@@ -37,6 +37,11 @@ p {
     margin: 10px 0px;
 }
 
+.validityError{
+    margin-top: 10px;
+    margin-bottom: 0px!important;
+}
+
 .mb {
     margin-bottom: 10% !important;
 }
@@ -73,4 +78,8 @@ p {
     text-align: center !important;
     margin-bottom: 9% !important;
     font-weight: 600;
+}
+
+.alert{
+    margin-top: 2rem!important
 }

@@ -148,17 +148,8 @@ export const useForm = (Form) => {
 
             } else {
 
-                response.error = ""
-                response.email = ""
-        
-                if (type) {
-                    response[type] = message 
-                }
-                document.getElementById(type).focus();
-                console.log(response)
-                return response;
+                {type === "email" ? setResponse({email: message}) && document.getElementById(type).focus() : setResponse({error: message})}
                 
-
             }
         })
     };

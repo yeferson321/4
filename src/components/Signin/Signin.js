@@ -31,7 +31,7 @@ function Signin() {
                         <label htmlFor="InputPassword" className={`${styles.formLabel} ${"form-label"}`}>Password contraseña</label>
                         <input type={typePassword} className={`${styles.formControl} ${"form-control"}`} id='password' name='password' value={form.password} onKeyUp={handleBlur} onBlur={handleBlur} onChange={handleChange} required />
                         {errors.password && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{errors.password}</label>}
-                        {response && <label className={`${styles.validity} ${"form-label"}`} style={{ color: "#f67d7d" }} >{response}</label>}
+                        {response.password && <label className={`${styles.validityError} ${"form-label"}`} style={{ color: "#f67d7d" }} >{response.password}</label>}
                     </div>
 
                     <div className={`${styles.mb} ${"form-switch"}`}>
@@ -41,6 +41,7 @@ function Signin() {
 
                     <div className={`${styles.mb}`}>
                         <button htmlFor="submit" className={`${styles.btnPrimary} ${"btn btn-primary"}`} id="btn" disabled={disabledButton}>Continuar</button>
+                        {response.error && <div  className={`${styles.alert} ${"alert alert-warning"}`} id='error' role="alert">{response.error}</div>}
                     </div>
 
                     <div className={`${styles.mb}`}>
