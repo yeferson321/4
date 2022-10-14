@@ -6,7 +6,7 @@ export const DataContext = createContext();
 const DataProvider = ({children}) => {
 
   const { checkToken } = AuthService();
-  const [isLoggedIn, setIsLoggedIn] = useState(checkToken);
+  const [isLoggedIn] = useState(checkToken);
 
   const [code, setCode] = useState();
   const addCode = (code) => { setCode(code) }

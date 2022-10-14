@@ -83,8 +83,6 @@ export const useForm = (Form) => {
             const answer = (res.data?.response)
             const userName = (res.data?.userName)
 
-            console.log(res.data)
-
             if (answer === true) {
 
                 login(res.data?.token, userName)

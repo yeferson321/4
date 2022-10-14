@@ -1,10 +1,9 @@
 //import { isExpired, decodeToken } from "react-jwt";
-import { useNavigate } from 'react-router-dom';
-import { useState  } from 'react';
+//import { useNavigate } from 'react-router-dom';
 
 export const AuthService = () => {
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     //método que nos permitirá chequear si existe un token, en tal
     //caso retornará true
