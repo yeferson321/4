@@ -9,7 +9,7 @@ function Nav4() {
     return (
 
         <div className='Nav4'>
-            <nav className={`${styles.navbar} ${"navbar bg-light fixed-top"}`}>
+            <nav className={`${styles.navbar} ${"navbar bg-light fixed-relative"}`}>
                 <div className="container-fluid">
                     <img src="https://firebasestorage.googleapis.com/v0/b/apideployusers.appspot.com/o/static_files%2Flogo2.png?alt=media&token=65078781-c9ca-45fe-905d-eeb24cef8b84" className={`${styles.imgFluid} ${"img-fluid"}`} alt="..." />
                     <a className={`${styles.toggler}`} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -31,6 +31,9 @@ function Nav4() {
                                 </li>
                                 <li className="nav-item">
                                     <a className={`${styles.navLink} ${"nav-link"}`} href="/">Inicio Oceane</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className={`${styles.navLink} ${"nav-link"}`} href="/datos">Datos</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className={`${styles.navLink} ${"nav-link"}`} onClick={logout} href="/">Cerrar sesion</a>

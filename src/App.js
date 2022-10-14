@@ -18,6 +18,7 @@ import Expired from './components/Expired/Expired';
 import ForgetPassword from './components/ForgetPassword/Forget';
 import Newpassword from './components/NewPassword/Newpassword';
 import ProtectetedRouter from './components/ProtectedRoute';
+import DatosUser from "./components/DatosUser/DatosUser";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
 
         <Route element={<ProtectetedRouter/>}>
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/datos" element={<DatosUser />} />
         </Route>
 
         <Route path="*" element={<Opening />} />

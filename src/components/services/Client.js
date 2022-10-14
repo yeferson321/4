@@ -68,6 +68,18 @@ export async function postSigninClient(datos) {
   return response
 }
 
+export async function postGetDataClient(datos) {
+  const response = await axios({
+    url: "http://localhost:5000/v1/datos",
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      'x-access-token': localStorage.getItem('token')
+    }
+  })
+  return response
+}
+
 export async function postForgetPassword(email) {
   const response = await axios({
     url: "https://apiuserdeploy.herokuapp.com/v1/forgetPassword",

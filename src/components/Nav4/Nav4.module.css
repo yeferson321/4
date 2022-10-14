@@ -1,6 +1,7 @@
 .navbar {
     background-color: #1f2937 !important;
     padding: 10px;
+    margin-bottom: 10%;
 }
 
 .offcanvas {
@@ -45,6 +46,7 @@
     font-family: 'Roboto' !important;
     font-weight: 600 !important;
     color: rgb(36 36 36 / 74%) !important;
+    text-align: center;
 }
 
 .navLink:hover {
